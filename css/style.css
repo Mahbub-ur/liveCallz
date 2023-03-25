@@ -1,3 +1,12 @@
+:root{
+    --font-size_14: calc(8px + (14 - 8) * (100vw - 320px) / (1440 - 320));
+    --font-size_16: calc(9px + (16 - 9) * (100vw - 320px) / (1440 - 320));
+    --font-size_18: calc(14px + (18 - 14) * (100vw - 320px) / (1440 - 320));
+    --font-size_20: calc(14px + (20 - 14) * (100vw - 320px) / (1440 - 320));
+    --font-size_22: calc(14px + (22 - 14) * (100vw - 320px) / (1440 - 320));
+    --font-size_26: calc(18px + (26 - 18) * (100vw - 320px) / (1440 - 320));
+    --font-size_48: calc(34px + (48 - 34) * (100vw - 320px) / (1440 - 320));
+}
 *{
     padding: 0;
     margin: 0;
@@ -20,7 +29,7 @@ header .logo{
     width: 60%;
 }
 header .navbar-nav .nav-link{
-    font-size: 16px;
+    font-size: var(--font-size_16);
     font-weight: 500;
     color: #FFFFFF;
     transition: 0.3s all ease-in-out;
@@ -52,16 +61,16 @@ header .left{
     margin: auto;
 }
 header .left h1{
-    font-size: 48px;
+    font-size: var(--font-size_48);
     font-weight: 600;
 }
 header .left p{
-    font-size: 16px;
+    font-size: var(--font-size_16);
     font-weight: 500;
     margin-top: 15px;
 }
-header .left .btn-primary{
-    font-size: 16px;
+.btn-primary{
+    font-size: var(--font-size_16);
     font-weight: 500;
     padding: 10px 15px;
     margin-top: 15px;
@@ -78,10 +87,12 @@ header .left .btn-primary{
 .btn-primary i{
     margin-left: 5px;
 }
-header .Right{
+header .right{
     margin: auto;
+    position: relative;
+    left: -10%;
 }
-header .Right .img_bx{
+header .right .img_bx{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,11 +113,11 @@ header .Right .img_bx{
     margin: auto;
 }
 .what_we_do .Right h1{
-    font-size: 48px;
+    font-size: var(--font-size_48);
     font-weight: 600;
 }
 .what_we_do .Right p{
-    font-size: 20px;
+    font-size: var(--font-size_20);
     font-weight: 500;
     margin-top: 10px;
     text-align: end;
@@ -128,11 +139,11 @@ header .Right .img_bx{
     width: 16%;
 }
 .what_we_do .item .header h3{
-    font-size: 26px;
+    font-size: var(--font-size_26);
     font-weight: 600;
 }
 .what_we_do .item p{
-    font-size: 16px;
+    font-size: var(--font-size_16);
     font-weight: 400;
     padding-right: 60px;
     line-height: 26px;
@@ -144,7 +155,7 @@ header .Right .img_bx{
 }
 .started h1{
     text-align: center;
-    font-size: 48px;
+    font-size: var(--font-size_48);
     font-weight: 600;
     margin-bottom: 15vh;
 }
@@ -168,27 +179,28 @@ header .Right .img_bx{
 .started .item i{
     margin-top: 7px;
     color: #409830;
-    font-size: 20px;
+    font-size: var(--font-size_20);
 }
 .started .item .fa-circle-xmark{
     color: #ff0000;
 }
 .started .item h3{
-    font-size: 26px;
+    font-size: var(--font-size_26);
     font-weight: 600;
     margin-bottom: 20px;
 }
 .started .item p{
     margin-left: 32px;
-    font-size: 16px;
+    font-size: var(--font-size_16);
     font-weight: 300;
     line-height: 26px;
 }
-.started .btn-primary{
+.started .btn-primary,
+.industries .btn-primary{
     width: auto;
     margin: auto;
     padding: 10px 15px;
-    font-size: 16px;
+    font-size: var(--font-size_16);
     font-weight: 500;
     background-color: #0c63b2;
     border: 0;
@@ -203,7 +215,7 @@ header .Right .img_bx{
 }
 .process h1{
     text-align: center;
-    font-size: 48px;
+    font-size: var(--font-size_48);
     font-weight: 600;
     margin-bottom: 15vh;
 }
@@ -241,25 +253,27 @@ header .Right .img_bx{
     align-items: center;
     color: #FFFFFF;
     margin: 0;
-    font-size: 18px;
+    font-size: var(--font-size_18);
 }
 .process .item h3{
-    font-size: 26px;
+    font-size: var(--font-size_26);
     font-weight: 600;
     margin-bottom: 30px;
 }
 .process .item p{
-    font-size: 16px;
+    font-size: var(--font-size_16);
     font-weight: 300;
     line-height: 26px;
 }
 .industries{
     padding: 60px 0;
+    position: relative;
+    z-index: 0;
 }
 .industries h1{
     text-align: center;
     margin-bottom: 15vh;
-    font-size: 48px;
+    font-size: var(--font-size_48);
     font-weight: 600;
 }
 .industries h1 span{
@@ -267,7 +281,10 @@ header .Right .img_bx{
 }
 .industries .item{
     background-color: #FFFFFF;
-    padding: 10px 20px;
+    padding: 20px 25px;
+    border-radius: 20px;
+    min-height: 55vh;
+    box-shadow: 1px 1px 5px #ddd;
 }
 .industries .item .icon{
     background-image: url(../images/icon_bg.png);
@@ -279,28 +296,166 @@ header .Right .img_bx{
 .industries .item .icon img{
     width: 90%;
 }
-.industries .item h3{}
-.industries .item ul{}
-.industries .item ul li{}
-.industries a{}
-.industries a i{}
-.questions{}
-.questions h1{}
-.questions ul{}
-.questions ul li i{}
-footer{}
-footer h1{}
-footer p{}
-footer a{}
-footer a i{}
-footer img{}
-footer .info{}
-footer .info .info_cart{}
-footer .info .info_cart i{}
-footer .info .info_cart p{}
-footer .logo{}
-footer .phone{}
-footer .phone i{}
-footer .phone .nav-link{}
-footer .footer{}
-footer .footer p{}
+.industries .item h3{
+    font-size: var(--font-size_22);
+    font-weight: 600;
+    margin: 20px 0;
+}
+.industries .item ul{
+    margin: 0;
+    padding: 0;
+}
+.industries .item ul li{
+    list-style-type: none;
+    font-size: var(--font-size_14);
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+.industries .btn-primary{
+    margin-top: 15vh;
+}
+.industries .i_bg{
+    position: absolute;
+    bottom: -5%;
+    z-index: -1;
+}
+.questions{
+    padding: 7vh 0;
+}
+.questions h1{
+    text-align: center;
+    font-size: var(--font-size_48);
+    font-weight: 600;
+}
+.questions ul{
+    margin-top: 20px;
+}
+.questions ul li{
+    list-style: none;
+    background-color: #FFFFFF;
+    margin-bottom: 10px;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: var(--font-size_18);
+    font-weight: 600;
+}
+.questions ul li i{
+    color: #0f65b3;
+    margin-right: 2vw;
+    font-size: var(--font-size_14);
+}
+footer{
+    background-image: url(../images/bg\ 2.png);
+    background-position: right 100%;
+    background-repeat: no-repeat;
+    background-size: 65%;
+}
+footer .left{
+    margin: auto;
+}
+footer .left h1{
+    font-size: var(--font-size_48);
+    font-weight: 600;
+}
+footer .left p{
+    font-size: var(--font-size_20);
+    font-weight: 500;
+    margin: 20px 0;
+}
+footer .right{
+    position: relative;
+    left: -10%;
+}
+footer .info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+footer .info .info_cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .info .info_cart i{
+    min-width: 30px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: #0f65b3;
+}
+footer .info .info_cart p{
+    margin: 0;
+    font-size: var(--font-size_16);
+    font-weight: 300;
+}
+footer .primary_footer{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .logo{
+    width: 15%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.primary_footer_right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+footer h4{
+    font-size: var(--font-size_16);
+    color: #FFFFFF;
+    margin: 0;
+}
+footer .phone{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    border: 1px solid #FFFFFF;
+    border-radius: 12px;
+    padding: 2px 15px;
+    transition: 0.3s all ease-in-out;
+}
+footer .phone:hover{
+    background-color: #54b345;
+}
+footer .phone i{
+    color: #FFFFFF;
+}
+footer .phone .nav-link{
+    color: #FFFFFF;
+    font-size: var(--font-size_16);
+    font-weight: 500;
+    margin: 0;
+}
+footer .footer{
+    margin-top: 15px;
+}
+footer .footer p{
+    font-size: var(--font-size_16);
+    font-weight: 300;
+}
+footer .footer .f_right{
+    color: #FFFFFF;
+    display: flex;
+    justify-content: flex-end;
+}
+footer .footer .f_right ul{
+    padding: 0;
+    margin: 0;
+}
+footer .footer .f_right ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 5px;
+    font-size: var(--font-size_16);
+}
+footer .footer .f_right ul li:nth-of-type(2){
+    border-left: 1px solid #FFF;
+}

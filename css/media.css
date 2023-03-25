@@ -1,0 +1,116 @@
+@media (max-width: 1024px) {
+    .what_we_do .item{
+        min-height: 55vh;
+    }
+    .process .item{
+        min-height: 65vh;
+    }
+    .industries .item{
+        min-height: 56vh;
+    }
+}
+@media (max-width: 768px) {
+    header i{
+        color: #FFFFFF;
+    }
+    .navbar-toggler:focus{
+        box-shadow: none;
+    }
+    header .nav-item{
+        text-align: center;
+    }
+    header .nav-item .nav-link{
+        display: inline-block;
+        font-weight: 600;
+        letter-spacing: 0.7px;
+        color: #000;
+    }
+    header .navbar-nav .nav-item.phone i{
+        color: #000;
+    }
+    header .navbar-nav .nav-item.phone{
+        margin: 0;
+    }
+    header .right{
+        left: -5%;
+    }
+    .what_we_do .left{
+        position: relative;
+        left: 2%;
+    }
+    .what_we_do .item{
+        min-height: 59vh;
+    }
+    .what_we_do .item p{
+        padding-right: 20px;
+    }
+    .process .item{
+        min-height: 80vh;
+        border-radius: 15% 15% 20px 20px;
+    }
+    footer .info{
+        margin-top: 20px;
+    }
+    footer .right{
+        left: -5%;
+    }
+}
+@media (max-width: 425px) {
+    header .right{
+        display: none;
+    }
+    .what_we_do .wwd_bg{
+        display: none;
+    }
+    .what_we_do .item{
+        min-height: 50vh;
+        text-align: center;
+    }
+    .what_we_do .item .header{
+        justify-content: center;
+    }
+    .what_we_do .item p{
+        font-size: 16px;
+        padding: 0;
+    }
+    .process .item{
+        margin-bottom: 40px;
+    }
+    .process .item h3{
+        font-size: 26px;
+    }
+    .process .item p{
+        font-size: 16px;
+    }
+    .industries .item{
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .industries .item .icon{
+        margin: auto;
+    }
+    .industries .item h3{
+        font-size: 26px;
+    }
+    .industries .item ul li{
+        font-size: 16px;
+    }
+    .industries .i_bg{
+        bottom: -2%;
+    }
+    footer .left{
+        text-align: center;
+    }
+    footer .logo{
+        width: 40%;
+        display: inline-block;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    footer h4{
+        color: #000;
+    }
+    footer .right{
+        display: none;
+    }
+}
